@@ -16,7 +16,7 @@ def main():
 
     @st.cache_data
     def load_data():
-        data = pd.read_csv('/workspaces/Praktikum6/dataset_invade.csv')
+        data = pd.read_csv('dataset_invade.csv')
         label = LabelEncoder()
         for col in data.columns:
             data[col] = label.fit_transform(data[col].astype(str))
